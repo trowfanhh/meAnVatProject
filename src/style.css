@@ -63,13 +63,16 @@ body {
     border-bottom: 3px solid transparent; 
 }
 
+/* SỬA: Thêm hiệu ứng hover/active cho menu Sản Phẩm */
 .main-nav a:hover,
-.main-nav a.active {
-    color: #e67e22;
-    border-bottom: 3px solid #e67e22;
+.main-nav a.active,
+.main-nav .mega-menu:hover > a { /* Áp dụng hiệu ứng hover cho chính link cha */
+    color: #e67e22;                /* Chữ màu cam */
+    border-bottom: 3px solid #e67e22; /* Gạch chân màu cam */
+    background: transparent;       /* Xóa nền màu cam cũ đi */
+    border-radius: 0;              /* Bỏ bo tròn cũ đi */
 }
 
-/* --- Mega Menu Styles --- */
 /* --- Mega Menu Styles --- */
 .main-nav .mega-menu {
     position: static !important;
@@ -162,7 +165,6 @@ body {
 
 .menu-column .subnav-link:hover {
     background: linear-gradient(135deg, #fff3e0, #ffe0b2);
-    color: #e67e22;
     transform: translateX(2px);
     box-shadow: 0 1px 4px rgba(230, 126, 34, 0.1);
 }
@@ -230,11 +232,17 @@ body {
     box-shadow: 0 2px 8px rgba(230, 126, 34, 0.1);
 }
 
-/* Header background khi hover mega menu */
-.main-nav .mega-menu:hover > a {
+/* XÓA: Header background khi hover mega menu - Đã tích hợp vào .main-nav a:hover bên trên */
+/* .main-nav .mega-menu:hover > a {
     background: linear-gradient(135deg, #e67e22, #d35400);
     color: white;
     border-radius: 8px 8px 0 0;
+} */
+.main-nav .mega-menu:hover > a { /* Giữ lại style này để nổi bật hơn khi mở mega menu */
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    color: white;
+    border-radius: 8px 8px 0 0;
+    border-bottom: none; /* Loại bỏ border-bottom cũ để border-radius hoạt động */
 }
 
 /* Responsive Mega Menu */
@@ -279,8 +287,11 @@ body {
     }
 }
 
-.main-nav .mega-menu-content {
-    animation: slideDown 0.3s ease;
+/* Tắt animation cho menu trên mobile (max-width: 768px) */
+@media (min-width: 769px) {
+    .main-nav .mega-menu-content {
+        animation: slideDown 0.3s ease;
+    }
 }
 
 /* Header Actions (Search & Cart) */
@@ -435,7 +446,7 @@ body {
     display: block;
 }
 
-/* --- STYLE MENU ẢNH 2 CỘT --- */
+/* --- STYLE MENU ẢNH 2 CỘT: ĐIỀU CHỈNH CÂN BẰNG CHIỀU CAO --- */
 .menu-image-row {
     display: flex;
     justify-content: center;
@@ -451,7 +462,22 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    min-height: 250px; 
+    /* Loại bỏ min-height để không ảnh hưởng đến ảnh */
+}
+
+/* ĐIỀU CHỈNH: Thiết lập chiều cao cố định cho container ảnh */
+.menu-image-container {
+    width: 100%;
+    height: 300px;       /* Chiều cao cố định để 2 bên bằng nhau */
+    background: #fff;    /* Màu nền trắng nếu ảnh không lấp đầy */
+    overflow: hidden;
+}
+
+.menu-placeholder-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* QUAN TRỌNG: Lệnh này giúp ảnh hiện ĐỦ, không bị che mất tí nào */
+    display: block;
 }
 
 .menu-title-header {
@@ -471,11 +497,6 @@ body {
     background-color: #1e88e5;
 }
 
-.menu-placeholder-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
 
 .section-divider {
     border: 0;
@@ -717,7 +738,7 @@ body {
 /* --- Style cho Trang Chi Tiết Sản Phẩm --- */
 #product-detail-section {
     padding: 20px 5%;
-    max-width: 1200px;
+    max-width: 1200px; /* Thêm max-width để nội dung gọn gàng hơn */
     margin: 0 auto;
 }
 
@@ -1366,6 +1387,25 @@ body {
     .auth-btn {
         padding: 6px 10px;
         font-size: 0.8em;
+    }
+    
+    /* Responsive cho 2 cột Menu Ảnh */
+    .menu-image-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .menu-column {
+        max-width: 100%;
+    }
+    
+    .menu-image-container {
+        height: 250px; /* Giảm chiều cao trên mobile */
+    }
+    
+    .contact-info-form {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 /* --- CSS CHO PHẦN AUTH (Đăng nhập/Đăng ký) --- */

@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartModal = document.getElementById('cart-modal');
     const checkoutModal = document.getElementById('checkout-modal');
     const cartBtn = document.getElementById('cart-icon-btn');
-    const closeBtns = document.querySelectorAll('.close-btn');
+    // Chỉ chọn nút close của giỏ hàng và thanh toán, bỏ qua nút close của Auth (vì Auth đã có hàm riêng)
+const closeBtns = document.querySelectorAll('#cart-modal .close-btn, #checkout-modal .close-btn');
     const cartCountSpan = document.querySelector('.cart-count');
     const searchInput = document.getElementById('product-search');
     const searchSuggestions = document.getElementById('search-suggestions');
