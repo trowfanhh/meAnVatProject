@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÊ ĂN VẶT - Trang Chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo" onclick="switchContent('home-section')">
+            <img src="../images/logo.jpg" alt="Logo MÊ ĂN VẶT" > 
+            <span>MÊ ĂN VẶT</span>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="nav-link active" data-target="home-section">Trang Chủ</a></li>
+                <li><a href="#" class="nav-link" data-target="about-section">Giới Thiệu</a></li>
+                
+                <!-- Menu Sản Phẩm với dropdown đa cấp -->
+                <li class="dropdown mega-menu">
+                    <a href="#" class="nav-link" data-target="product-section">Sản Phẩm</a>
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h3>Trà Sữa</h3>
+                            <ul>
+                                <li><a href="#" class="subnav-link" data-category="trasua">Trà Sữa Truyền Thống</a></li>
+                                <li><a href="#" class="subnav-link" data-category="trasua">Trà Sữa Ô Long</a></li>
+                                <li><a href="#" class="subnav-link" data-category="trasua">Trà Sữa Matcha</a></li>
+                                <li><a href="#" class="subnav-link" data-category="trasua">Trà Sữa Socola</a></li>
+                                <li><a href="#" class="subnav-link" data-category="trasua">Trà Sữa Dâu</a></li>
+                                <li><a href="#" class="subnav-link" data-category="trasua">Trà Sữa Thái Xanh</a></li>
+                                <li><a href="#" class="subnav-link" data-category="trasua">Trà Sữa Caramel</a></li>
+                                <li><a href="#" class="subnav-link" data-category="trasua">Trà Sữa Phô Mai</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Cà Phê</h3>
+                            <ul>
+                                <li><a href="#" class="subnav-link" data-category="cafe">Cà Phê Sữa Đá</a></li>
+                                <li><a href="#" class="subnav-link" data-category="cafe">Cà Phê Đen Đá</a></li>
+                                <li><a href="#" class="subnav-link" data-category="cafe">Bạc Xỉu</a></li>
+                                <li><a href="#" class="subnav-link" data-category="cafe">Cà Phê Muối</a></li>
+                                <li><a href="#" class="subnav-link" data-category="cafe">Americano</a></li>
+                                <li><a href="#" class="subnav-link" data-category="cafe">Latte</a></li>
+                                <li><a href="#" class="subnav-link" data-category="cafe">Cappuccino</a></li>
+                                <li><a href="#" class="subnav-link" data-category="cafe">Espresso</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Đồ Ăn Vặt</h3>
+                            <ul>
+                                <li><a href="#" class="subnav-link" data-category="anvat">Bánh Tráng Trộn</a></li>
+                                <li><a href="#" class="subnav-link" data-category="anvat">Cá Viên Chiên</a></li>
+                                <li><a href="#" class="subnav-link" data-category="anvat">Chân Gà Sả Tắc</a></li>
+                                <li><a href="#" class="subnav-link" data-category="anvat">Khoai Tây Lắc</a></li>
+                                <li><a href="#" class="subnav-link" data-category="anvat">Bánh Mì Que</a></li>
+                                <li><a href="#" class="subnav-link" data-category="anvat">Xúc Xích Nướng</a></li>
+                                <li><a href="#" class="subnav-link" data-category="anvat">Bò Khô</a></li>
+                                <li><a href="#" class="subnav-link" data-category="anvat">Mực Khô</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Bánh Ngọt</h3>
+                            <ul>
+                                <li><a href="#" class="subnav-link" data-category="banhngot">Bánh Kem Socola</a></li>
+                                <li><a href="#" class="subnav-link" data-category="banhngot">Bánh Tiramisu</a></li>
+                                <li><a href="#" class="subnav-link" data-category="banhngot">Bánh Mousse Dâu</a></li>
+                                <li><a href="#" class="subnav-link" data-category="banhngot">Bánh Su Kem</a></li>
+                                <li><a href="#" class="subnav-link" data-category="banhngot">Bánh Quy Hạnh Nhân</a></li>
+                                <li><a href="#" class="subnav-link" data-category="banhngot">Bánh Tart Trứng</a></li>
+                                <li><a href="#" class="subnav-link" data-category="banhngot">Bánh Crepe</a></li>
+                                <li><a href="#" class="subnav-link" data-category="banhngot">Bánh Flan</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h3>Đồ Đặc Biệt</h3>
+                            <ul>
+                                <li><a href="#" class="subnav-link" data-category="dacbiet">Mì Cay Hàn Quốc</a></li>
+                                <li><a href="#" class="subnav-link" data-category="dacbiet">Bánh Bao Nhân Ngọt</a></li>
+                                <li><a href="#" class="subnav-link" data-category="dacbiet">Sữa Chua Nếp Cẩm</a></li>
+                                <li><a href="#" class="subnav-link" data-category="dacbiet">Pizza Mini</a></li>
+                                <li><a href="#" class="subnav-link" data-category="dacbiet">Mochi Fresh</a></li>
+                                <li><a href="#" class="subnav-link" data-category="dacbiet">Takoyaki</a></li>
+                                <li><a href="#" class="subnav-link" data-category="dacbiet">Bánh Gạo Phô Mai</a></li>
+                                <li><a href="#" class="subnav-link" data-category="dacbiet">Kimbap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                <li><a href="#" class="nav-link" data-target="news-section">Tin Tức/Sự Kiện</a></li> 
+                <li><a href="#" class="nav-link" data-target="contact-section">Liên Hệ</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <div class="search-bar">
+                <input type="text" id="product-search" placeholder="Tìm kiếm sản phẩm...">
+                <i class="fas fa-search"></i>
+                <div id="search-suggestions" class="search-suggestions"></div> 
+            </div>
+            <button class="cart-icon" id="cart-icon-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </button>
+           <div id="user-actions" class="user-actions">
+        <div id="guest-view">
+            <button class="auth-btn login-btn" onclick="openAuthModal('login')">Đăng nhập</button>
+            <button class="auth-btn register-btn" onclick="openAuthModal('register')">Đăng ký</button>
+        </div>
+        <div id="logged-view" style="display: none; align-items: center; gap: 10px;">
+            <span id="user-greeting" style="font-weight: bold; color: #e67e22;">Xin chào, User</span>
+            <button onclick="logout()" style="border: none; background: none; color: #666; cursor: pointer;">(Đăng xuất)</button>
+        </div>
+    </div>
+        </div>
+    </header>
+
+    <section class="hero-section" id="hero-section">
+        <img src="../images/anhnen.jpg" alt="Ảnh nền MÊ ĂN VẶT" class="hero-background-image">
+        <div class="hero-content">
+            <h1>MÊ ĂN VẶT</h1>
+            <p>Khám phá Thiên Đường Ăn Vặt, Nơi Mọi Món Ngon Được Sưu Tầm!</p>
+        </div>
+    </section>
+    
+    <main class="content-container">
+
+        <section id="home-section" class="content-section active">
+            <!-- Sản phẩm nổi bật -->
+            <div class="scroll-section">
+                <h2 class="section-title">✨ Sản Phẩm Nổi Bật ✨</h2>
+                <div class="product-grid featured-grid">
+                    <!-- tra sua truyen thong -->
+                    <div class="product-item" data-id="1" data-name="Trà Sữa Truyền Thống" data-price="35000" data-category="Trà Sữa" data-image="https://via.placeholder.com/300x200?text=Trà+Sữa+Truyền+Thống" data-description="Trà sữa truyền thống với hương vị thơm ngon đặc trưng, kết hợp trân châu dai giòn.">
+                        <img src="../images/trasuatruyenthong.jpg" alt="Trà Sữa Truyền Thống" class="product-image"> 
+                        <h3>Trà Sữa Truyền Thống</h3>
+                        <p class="price">35,000₫</p>
+                        <button class="add-to-cart-btn" data-id="1">Thêm vào giỏ</button>
+                    </div>
+                    <!-- ca phe sua da -->
+                    <div class="product-item" data-id="9" data-name="Cà Phê Sữa Đá" data-price="25000" data-category="Cà Phê" data-image="https://via.placeholder.com/300x200?text=Cà+Phê+Sữa+Đá" data-description="Cà phê sữa đá thơm ngon, đậm đà hương vị Việt Nam.">
+                        <img src="../images/caphe.jpg" alt="Cà Phê Sữa Đá" class="product-image"> 
+                        <h3>Cà Phê Sữa Đá</h3>
+                        <p class="price">25,000₫</p>
+                        <button class="add-to-cart-btn" data-id="9">Thêm vào giỏ</button>
+                    </div>
+                    <!-- banh trang tron -->
+                    <div class="product-item" data-id="17" data-name="Bánh Tráng Trộn" data-price="30000" data-category="Đồ Ăn Vặt" data-image="https://via.placeholder.com/300x200?text=Bánh+Tráng+Trộn" data-description="Bánh tráng trộn với đầy đủ topping hấp dẫn, vị chua cay mặn ngọt đặc trưng.">
+                        <img src="../images/banhtrangtron.jpg" alt="Bánh Tráng Trộn" class="product-image"> 
+                        <h3>Bánh Tráng Trộn</h3>
+                        <p class="price">30,000₫</p>
+                        <button class="add-to-cart-btn" data-id="17">Thêm vào giỏ</button>
+                    </div>
+                    <!-- banh kem socola -->
+                    <div class="product-item" data-id="25" data-name="Bánh Kem Socola" data-price="85000" data-category="Bánh Ngọt" data-image="https://via.placeholder.com/300x200?text=Bánh+Kem+Socola" data-description="Bánh kem socola thơm ngon, béo ngậy với lớp kem mềm mịn.">
+                        <img src="../images/banhkemsocola.jpg" alt="Bánh Kem Socola" class="product-image"> 
+                        <h3>Bánh Kem Socola</h3>
+                        <p class="price">85,000₫</p>
+                        <button class="add-to-cart-btn" data-id="25">Thêm vào giỏ</button>
+                    </div>
+                    <!-- mi cay han quoc -->
+                    <div class="product-item" data-id="33" data-name="Mì Cay Hàn Quốc" data-price="65000" data-category="Đồ Đặc Biệt" data-image="https://via.placeholder.com/300x200?text=Mì+Cay+Hàn+Quốc" data-description="Mì cay Hàn Quốc với vị cay nồng đặc trưng, kèm nhiều topping hấp dẫn.">
+                        <img src="../images/micayhanquoc.jpg" alt="Mì Cay Hàn Quốc" class="product-image"> 
+                        <h3>Mì Cay Hàn Quốc</h3>
+                        <p class="price">65,000₫</p>
+                        <button class="add-to-cart-btn" data-id="33">Thêm vào giỏ</button>
+                    </div>
+                    <!-- tra sua o long -->
+                    <div class="product-item" data-id="2" data-name="Trà Sữa Ô Long" data-price="40000" data-category="Trà Sữa" data-image="https://via.placeholder.com/300x200?text=Trà+Sữa+Ô+Long" data-description="Trà sữa ô long thơm ngon, hương vị thanh mát đặc trưng.">
+                        <img src="../images/trasuaolong.jpg" alt="Trà Sữa Ô Long" class="product-image"> 
+                        <h3>Trà Sữa Ô Long</h3>
+                        <p class="price">40,000₫</p>
+                        <button class="add-to-cart-btn" data-id="2">Thêm vào giỏ</button>
+                    </div>
+                    <!-- banh tiramisu -->
+                    <div class="product-item" data-id="26" data-name="Bánh Tiramisu" data-price="45000" data-category="Bánh Ngọt" data-image="https://via.placeholder.com/300x200?text=Bánh+Tiramisu" data-description="Bánh tiramisu với hương vị cà phê đậm đà, lớp kem mousse mềm mịn.">
+                        <img src="../images/banhtiramisu.jpg" alt="Bánh Tiramisu" class="product-image"> 
+                        <h3>Bánh Tiramisu</h3>
+                        <p class="price">45,000₫</p>
+                        <button class="add-to-cart-btn" data-id="26">Thêm vào giỏ</button>
+                    </div>
+                    <!-- banh bao nhan ngot -->
+                    <div class="product-item" data-id="34" data-name="Bánh Bao Nhân Ngọt" data-price="20000" data-category="Đồ Đặc Biệt" data-image="https://via.placeholder.com/300x200?text=Bánh+Bao+Nhân+Ngọt" data-description="Bánh bao nhân ngọt thơm ngon, vỏ bánh mềm xốp, nhân ngọt dịu.">
+                        <img src="../images/banhbaonhanngot.jpg" alt="Bánh Bao Nhân Ngọt" class="product-image"> 
+                        <h3>Bánh Bao Nhân Ngọt</h3>
+                        <p class="price">20,000₫</p>
+                        <button class="add-to-cart-btn" data-id="34">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Giới thiệu ngắn -->
+            <div class="scroll-section">
+                <h2 class="section-title">🔥 Về MÊ ĂN VẶT 🔥</h2>
+                <div class="about-preview">
+                    <p>MÊ ĂN VẶT - Thiên đường ẩm thực đường phố với hơn 100 món ăn vặt đa dạng từ truyền thống đến hiện đại. Chúng tôi mang đến trải nghiệm ẩm thực độc đáo với nguyên liệu tươi ngon, công thức chế biến đặc biệt và không gian thoải mái.</p>
+                </div>
+            </div>
+
+            <!-- Danh mục sản phẩm preview -->
+            <div class="scroll-section">
+                <h2 class="section-title">🍕 Danh Mục Sản Phẩm 🥤</h2>
+                <div class="category-preview">
+                    <div class="category-card" onclick="switchContent('product-section')">
+                        <i class="fas fa-coffee"></i>
+                        <h3>Trà & Cà Phê</h3>
+                        <p>Hơn 20 loại thức uống</p>
+                    </div>
+                    <div class="category-card" onclick="switchContent('product-section')">
+                        <i class="fas fa-hamburger"></i>
+                        <h3>Đồ Ăn Vặt</h3>
+                        <p>50+ món ăn đa dạng</p>
+                    </div>
+                    <div class="category-card" onclick="switchContent('product-section')">
+                        <i class="fas fa-birthday-cake"></i>
+                        <h3>Bánh Ngọt</h3>
+                        <p>Bánh tươi mỗi ngày</p>
+                    </div>
+                    <div class="category-card" onclick="switchContent('product-section')">
+                        <i class="fas fa-star"></i>
+                        <h3>Đặc Biệt</h3>
+                        <p>Món độc quyền</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about-section" class="content-section">
+            <h2 class="section-title">🔥 Giới Thiệu Về MÊ ĂN VẶT 🔥</h2>
+            <div class="about-content">
+                <p>Xin chào, chúng tôi là **MÊ ĂN VẶT** – nơi hội tụ của những tín đồ ẩm thực đường phố, những người trót yêu cái vị cay, giòn, thơm lừng của món ăn vặt tuổi thơ và hiện đại! </p>
+                
+                <p>Chúng tôi không chỉ là một tiệm ăn vặt, mà là một **Thiên Đường Thu Nhỏ** được xây dựng bằng niềm đam mê bất tận với ẩm thực. Tại **MÊ ĂN VẶT**, bạn sẽ tìm thấy:</p>
+                <ul>
+                    <li>**Chất Lượng Đỉnh Cao:** Mọi nguyên liệu đều được chọn lọc kỹ càng, đảm bảo tươi ngon và an toàn vệ sinh thực phẩm.</li>
+                    <li>**Sáng Tạo Vị Giác:** Từ Bánh Tráng Trộn chuẩn vị Sài Gòn, Khoai Tây Lắc phô mai béo ngậy, đến những món trà sữa, nước ép độc đáo – tất cả đều được chế biến bằng công thức "gây nghiện" riêng.</li>
+                    <li>**Không Gian Thoải Mái:** Một không gian ấm cúng, trẻ trung, lý tưởng để bạn tụ tập bạn bè, "tám chuyện" và tận hưởng những món ngon.</li>
+                </ul>
+                <p>Hãy đến với **MÊ ĂN VẶT** để thỏa mãn chiếc bụng đói và khám phá thế giới ăn vặt đầy màu sắc, nơi bạn sẽ thực sự **mê** mẩn từng món ăn!</p>
+            </div>
+        </section>
+
+        <section id="product-section" class="content-section">
+            <h2 class="section-title">🍕 Menu & Sản Phẩm Chi Tiết 🥤</h2>
+            
+            <div class="menu-image-row">
+                <div class="menu-column food-column">
+                    <h3 class="menu-title-header food-header">Menu Món Ăn Chính</h3>
+                    <img src="../images/menu_an.png" alt="Menu Món Ăn (Vui lòng thay thế ảnh)" class="menu-placeholder-image">
+                </div>
+                
+                <div class="menu-column drink-column">
+                    <h3 class="menu-title-header drink-header">Menu Nước Uống/Tráng Miệng</h3>
+                    <img src="../images/menu_nuoc.jpg" alt="Menu Nước Uống (Vui lòng thay thế ảnh)" class="menu-placeholder-image">
+                </div>
+            </div>
+            
+            <hr class="section-divider">
+
+            <!-- TRÀ SỮA - 8 sản phẩm -->
+            <h3 class="category-title fade-in">🧋 Trà Sữa (Milk Tea)</h3>
+            <div id="category-trasua" class="product-grid category-grid">
+                <!-- tra sua truyen thong -->
+                <div class="product-item" data-id="1" data-name="Trà Sữa Truyền Thống" data-price="35000" data-category="Trà Sữa" data-image="https://via.placeholder.com/300x200?text=Trà+Sữa+Truyền+Thống" data-description="Trà sữa truyền thống với hương vị thơm ngon đặc trưng, kết hợp trân châu dai giòn.">
+                    <img src="../images/trasuatruyenthong.jpg" alt="Trà Sữa Truyền Thống" class="product-image"> 
+                    <h3>Trà Sữa Truyền Thống</h3>
+                    <p class="price">35,000₫</p>
+                    <button class="add-to-cart-btn" data-id="1">Thêm vào giỏ</button>
+                </div>
+                <!-- tra sua o long -->
+                <div class="product-item" data-id="2" data-name="Trà Sữa Ô Long" data-price="40000" data-category="Trà Sữa" data-image="https://via.placeholder.com/300x200?text=Trà+Sữa+Ô+Long" data-description="Trà sữa ô long thơm ngon, hương vị thanh mát đặc trưng.">
+                    <img src="../images/trasuaolong.jpg" alt="Trà Sữa Ô Long" class="product-image"> 
+                    <h3>Trà Sữa Ô Long</h3>
+                    <p class="price">40,000₫</p>
+                    <button class="add-to-cart-btn" data-id="2">Thêm vào giỏ</button>
+                </div>
+                <!-- tra sua matcha -->
+                <div class="product-item" data-id="3" data-name="Trà Sữa Matcha" data-price="45000" data-category="Trà Sữa" data-image="https://via.placeholder.com/300x200?text=Trà+Sữa+Matcha" data-description="Trà sữa matcha Nhật Bản, vị thanh mát, thơm hương trà xanh.">
+                    <img src="../images/trasuamatcha.jpg" alt="Trà Sữa Matcha" class="product-image"> 
+                    <h3>Trà Sữa Matcha</h3>
+                    <p class="price">45,000₫</p>
+                    <button class="add-to-cart-btn" data-id="3">Thêm vào giỏ</button>
+                </div>
+                <!-- tra sua socola -->
+                <div class="product-item" data-id="4" data-name="Trà Sữa Socola" data-price="42000" data-category="Trà Sữa" data-image="https://via.placeholder.com/300x200?text=Trà+Sữa+Socola" data-description="Trà sữa socola thơm ngon, vị ngọt dịu kết hợp với socola belgium.">
+                    <img src="../images/trasuasocola.jpg" alt="Trà Sữa Socola" class="product-image"> 
+                    <h3>Trà Sữa Socola</h3>
+                    <p class="price">42,000₫</p>
+                    <button class="add-to-cart-btn" data-id="4">Thêm vào giỏ</button>
+                </div>
+                <!-- tra sua dau -->
+                <div class="product-item" data-id="5" data-name="Trà Sữa Dâu" data-price="43000" data-category="Trà Sữa" data-image="https://via.placeholder.com/300x200?text=Trà+Sữa+Dâu" data-description="Trà sữa dâu tây thơm ngon, vị chua ngọt tự nhiên từ dâu tây tươi.">
+                    <img src="../images/trasuadau.jpg" alt="Trà Sữa Dâu" class="product-image"> 
+                    <h3>Trà Sữa Dâu</h3>
+                    <p class="price">43,000₫</p>
+                    <button class="add-to-cart-btn" data-id="5">Thêm vào giỏ</button>
+                </div>
+                <!-- tra sua thai xanh -->
+                <div class="product-item" data-id="6" data-name="Trà Sữa Thái Xanh" data-price="38000" data-category="Trà Sữa" data-image="https://via.placeholder.com/300x200?text=Trà+Sữa+Thái+Xanh" data-description="Trà sữa Thái xanh độc đáo, vị chua ngọt thanh mát đặc trưng.">
+                    <img src="../images/trasuathaixanh.jpg" alt="Trà Sữa Thái Xanh" class="product-image"> 
+                    <h3>Trà Sữa Thái Xanh</h3>
+                    <p class="price">38,000₫</p>
+                    <button class="add-to-cart-btn" data-id="6">Thêm vào giỏ</button>
+                </div>
+                <!-- tra sua caramel -->
+                <div class="product-item" data-id="7" data-name="Trà Sữa Caramel" data-price="45000" data-category="Trà Sữa" data-image="https://via.placeholder.com/300x200?text=Trà+Sữa+Caramel" data-description="Trà sữa caramel thơm béo, vị ngọt đậm đà từ caramel hảo hạng.">
+                    <img src="../images/trasuacaramel.jpg" alt="Trà Sữa Caramel" class="product-image"> 
+                    <h3>Trà Sữa Caramel</h3>
+                    <p class="price">45,000₫</p>
+                    <button class="add-to-cart-btn" data-id="7">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="8" data-name="Trà Sữa Phô Mai" data-price="48000" data-category="Trà Sữa" data-image="https://via.placeholder.com/300x200?text=Trà+Sữa+Phô+Mai" data-description="Trà sữa phô mai độc đáo, lớp foam phô mai béo ngậy trên nền trà thơm.">
+                    <img src="../images/trasuaphomai.jpg" alt="Trà Sữa Phô Mai" class="product-image"> 
+                    <h3>Trà Sữa Phô Mai</h3>
+                    <p class="price">48,000₫</p>
+                    <button class="add-to-cart-btn" data-id="8">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <!-- CÀ PHÊ - 8 sản phẩm -->
+            <h3 class="category-title fade-in">☕ Cà Phê (Coffee)</h3>
+            <div id="category-cafe" class="product-grid category-grid">
+                <!-- ca phe sua da -->
+                <div class="product-item" data-id="9" data-name="Cà Phê Sữa Đá" data-price="25000" data-category="Cà Phê" data-image="https://via.placeholder.com/300x200?text=Cà+Phê+Sữa+Đá" data-description="Cà phê sữa đá thơm ngon, đậm đà hương vị Việt Nam.">
+                    <img src="../images/caphesuada.jpg" alt="Cà Phê Sữa Đá" class="product-image"> 
+                    <h3>Cà Phê Sữa Đá</h3>
+                    <p class="price">25,000₫</p>
+                    <button class="add-to-cart-btn" data-id="9">Thêm vào giỏ</button>
+                </div>
+                <!-- ca phe den da -->
+                <div class="product-item" data-id="10" data-name="Cà Phê Đen Đá" data-price="20000" data-category="Cà Phê" data-image="https://via.placeholder.com/300x200?text=Cà+Phê+Đen+Đá" data-description="Cà phê đen đá nguyên chất, vị đắng mạnh mẽ thích hợp cho người sành cà phê.">
+                    <img src="../images/caphedenda.jpg" alt="Cà Phê Đen Đá" class="product-image"> 
+                    <h3>Cà Phê Đen Đá</h3>
+                    <p class="price">20,000₫</p>
+                    <button class="add-to-cart-btn" data-id="10">Thêm vào giỏ</button>
+                </div>
+                <!-- bac xiu -->
+                <div class="product-item" data-id="11" data-name="Bạc Xỉu" data-price="30000" data-category="Cà Phê" data-image="https://via.placeholder.com/300x200?text=Bạc+Xỉu" data-description="Bạc xỉu Sài Gòn, vị cà phê nhẹ nhàng hòa quyện với sữa đặc thơm ngon.">
+                    <img src="../images/bacxiu.jpg" alt="Bạc Xỉu" class="product-image"> 
+                    <h3>Bạc Xỉu</h3>
+                    <p class="price">30,000₫</p>
+                    <button class="add-to-cart-btn" data-id="11">Thêm vào giỏ</button>
+                </div>
+                <!-- ca phe muoi -->
+                <div class="product-item" data-id="12" data-name="Cà Phê Muối" data-price="35000" data-category="Cà Phê" data-image="https://via.placeholder.com/300x200?text=Cà+Phê+Muối" data-description="Cà phê muối Huế độc đáo, vị mặn nhẹ làm nổi bật hương vị cà phê.">
+                    <img src="../images/caphemuoi.jpg" alt="Cà Phê Muối" class="product-image"> 
+                    <h3>Cà Phê Muối</h3>
+                    <p class="price">35,000₫</p>
+                    <button class="add-to-cart-btn" data-id="12">Thêm vào giỏ</button>
+                </div>
+                <!-- americano -->
+                <div class="product-item" data-id="13" data-name="Americano" data-price="40000" data-category="Cà Phê" data-image="https://via.placeholder.com/300x200?text=Americano" data-description="Americano chuẩn Ý, espresso đậm đà pha với nước nóng, vị cà phê nguyên chất.">
+                    <img src="../images/americano.jpg" alt="Americano" class="product-image"> 
+                    <h3>Americano</h3>
+                    <p class="price">40,000₫</p>
+                    <button class="add-to-cart-btn" data-id="13">Thêm vào giỏ</button>
+                </div>
+                <!-- latte -->
+                <div class="product-item" data-id="14" data-name="Latte" data-price="45000" data-category="Cà Phê" data-image="https://via.placeholder.com/300x200?text=Latte" data-description="Latte thơm ngon, sữa tươi hòa quyện với espresso, lớp foam mềm mịn.">
+                    <img src="../images/latte.jpg" alt="Latte" class="product-image"> 
+                    <h3>Latte</h3>
+                    <p class="price">45,000₫</p>
+                    <button class="add-to-cart-btn" data-id="14">Thêm vào giỏ</button>
+                </div>
+                <!-- cappucino -->
+                <div class="product-item" data-id="15" data-name="Cappuccino" data-price="48000" data-category="Cà Phê" data-image="https://via.placeholder.com/300x200?text=Cappuccino" data-description="Cappuccino Ý, lớp foam dày mịn, vị cà phê cân bằng hoàn hảo.">
+                    <img src="../images/cappucino.jpg" alt="Cappuccino" class="product-image"> 
+                    <h3>Cappuccino</h3>
+                    <p class="price">48,000₫</p>
+                    <button class="add-to-cart-btn" data-id="15">Thêm vào giỏ</button>
+                </div>
+                <!-- espresso -->
+                <div class="product-item" data-id="16" data-name="Espresso" data-price="35000" data-category="Cà Phê" data-image="https://via.placeholder.com/300x200?text=Espresso" data-description="Espresso nguyên chất, tinh túy của cà phê, vị đậm đà và thơm nồng.">
+                    <img src="../images/espresso.jpg" alt="Espresso" class="product-image"> 
+                    <h3>Espresso</h3>
+                    <p class="price">35,000₫</p>
+                    <button class="add-to-cart-btn" data-id="16">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <!-- ĐỒ ĂN VẶT - 8 sản phẩm -->
+            <h3 class="category-title fade-in">🍢 Đồ Ăn Vặt (Snacks)</h3>
+            <div id="category-anvat" class="product-grid category-grid">
+                <div class="product-item" data-id="17" data-name="Bánh Tráng Trộn" data-price="30000" data-category="Đồ Ăn Vặt" data-image="https://via.placeholder.com/300x200?text=Bánh+Tráng+Trộn" data-description="Bánh tráng trộn với đầy đủ topping hấp dẫn, vị chua cay mặn ngọt đặc trưng.">
+                    <img src="banhtrangtron.jpg" alt="Bánh Tráng Trộn" class="product-image"> 
+                    <h3>Bánh Tráng Trộn</h3>
+                    <p class="price">30,000₫</p>
+                    <button class="add-to-cart-btn" data-id="17">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="18" data-name="Cá Viên Chiên" data-price="25000" data-category="Đồ Ăn Vặt" data-image="https://via.placeholder.com/300x200?text=Cá+Viên+Chiên" data-description="Cá viên chiên vàng giòn, thơm ngon, chấm cùng tương ớt cay nồng.">
+                    <img src="https://via.placeholder.com/300x200?text=Cá+Viên+Chiên" alt="Cá Viên Chiên" class="product-image"> 
+                    <h3>Cá Viên Chiên</h3>
+                    <p class="price">25,000₫</p>
+                    <button class="add-to-cart-btn" data-id="18">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="19" data-name="Chân Gà Sả Tắc" data-price="45000" data-category="Đồ Ăn Vặt" data-image="https://via.placeholder.com/300x200?text=Chân+Gà+Sả+Tắc" data-description="Chân gà sả tắc giòn dai, vị chua cay mặn ngọt hài hòa, thơm mùi sả.">
+                    <img src="changasot.jpg" alt="Chân Gà Sả Tắc" class="product-image"> 
+                    <h3>Chân Gà Sả Tắc</h3>
+                    <p class="price">45,000₫</p>
+                    <button class="add-to-cart-btn" data-id="19">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="20" data-name="Khoai Tây Lắc" data-price="35000" data-category="Đồ Ăn Vặt" data-image="https://via.placeholder.com/300x200?text=Khoai+Tây+Lắc" data-description="Khoai tây lắc phô mai, vị béo ngậy kết hợp với khoai tây giòn tan.">
+                    <img src="https://via.placeholder.com/300x200?text=Khoai+Tây+Lắc" alt="Khoai Tây Lắc" class="product-image"> 
+                    <h3>Khoai Tây Lắc</h3>
+                    <p class="price">35,000₫</p>
+                    <button class="add-to-cart-btn" data-id="20">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="21" data-name="Bánh Mì Que" data-price="20000" data-category="Đồ Ăn Vặt" data-image="https://via.placeholder.com/300x200?text=Bánh+Mì+Que" data-description="Bánh mì que giòn rụm, thơm mùi bơ tỏi, ăn kèm tương ớt.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Mì+Que" alt="Bánh Mì Que" class="product-image"> 
+                    <h3>Bánh Mì Que</h3>
+                    <p class="price">20,000₫</p>
+                    <button class="add-to-cart-btn" data-id="21">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="22" data-name="Xúc Xích Nướng" data-price="30000" data-category="Đồ Ăn Vặt" data-image="https://via.placeholder.com/300x200?text=Xúc+Xích+Nướng" data-description="Xúc xích nướng thơm lừng, da giòn rụm, ruột mềm ngọt.">
+                    <img src="https://via.placeholder.com/300x200?text=Xúc+Xích+Nướng" alt="Xúc Xích Nướng" class="product-image"> 
+                    <h3>Xúc Xích Nướng</h3>
+                    <p class="price">30,000₫</p>
+                    <button class="add-to-cart-btn" data-id="22">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="23" data-name="Bò Khô" data-price="55000" data-category="Đồ Ăn Vặt" data-image="https://via.placeholder.com/300x200?text=Bò+Khô" data-description="Bò khô dai thơm, vị ngọt đậm đà, ăn vặt hoặc nhậu đều tuyệt.">
+                    <img src="https://via.placeholder.com/300x200?text=Bò+Khô" alt="Bò Khô" class="product-image"> 
+                    <h3>Bò Khô</h3>
+                    <p class="price">55,000₫</p>
+                    <button class="add-to-cart-btn" data-id="23">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="24" data-name="Mực Khô" data-price="60000" data-category="Đồ Ăn Vặt" data-image="https://via.placeholder.com/300x200?text=Mực+Khô" data-description="Mực khô nướng thơm lừng, dai ngon, vị biển đặc trưng.">
+                    <img src="https://via.placeholder.com/300x200?text=Mực+Khô" alt="Mực Khô" class="product-image"> 
+                    <h3>Mực Khô</h3>
+                    <p class="price">60,000₫</p>
+                    <button class="add-to-cart-btn" data-id="24">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <!-- BÁNH NGỌT - 8 sản phẩm -->
+            <h3 class="category-title fade-in">🍰 Bánh Ngọt (Cakes)</h3>
+            <div id="category-banhngot" class="product-grid category-grid">
+                <div class="product-item" data-id="25" data-name="Bánh Kem Socola" data-price="85000" data-category="Bánh Ngọt" data-image="https://via.placeholder.com/300x200?text=Bánh+Kem+Socola" data-description="Bánh kem socola thơm ngon, béo ngậy với lớp kem mềm mịn.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Kem+Socola" alt="Bánh Kem Socola" class="product-image"> 
+                    <h3>Bánh Kem Socola</h3>
+                    <p class="price">85,000₫</p>
+                    <button class="add-to-cart-btn" data-id="25">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="26" data-name="Bánh Tiramisu" data-price="45000" data-category="Bánh Ngọt" data-image="https://via.placeholder.com/300x200?text=Bánh+Tiramisu" data-description="Bánh tiramisu với hương vị cà phê đậm đà, lớp kem mousse mềm mịn.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Tiramisu" alt="Bánh Tiramisu" class="product-image"> 
+                    <h3>Bánh Tiramisu</h3>
+                    <p class="price">45,000₫</p>
+                    <button class="add-to-cart-btn" data-id="26">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="27" data-name="Bánh Mousse Dâu" data-price="50000" data-category="Bánh Ngọt" data-image="https://via.placeholder.com/300x200?text=Bánh+Mousse+Dâu" data-description="Bánh mousse dâu tươi, vị chua ngọt thanh mát, kem mousse mịn màng.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Mousse+Dâu" alt="Bánh Mousse Dâu" class="product-image"> 
+                    <h3>Bánh Mousse Dâu</h3>
+                    <p class="price">50,000₫</p>
+                    <button class="add-to-cart-btn" data-id="27">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="28" data-name="Bánh Su Kem" data-price="25000" data-category="Bánh Ngọt" data-image="https://via.placeholder.com/300x200?text=Bánh+Su+Kem" data-description="Bánh su kem vỏ giòn, nhân kem tươi mát lạnh, vị ngọt dịu.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Su+Kem" alt="Bánh Su Kem" class="product-image"> 
+                    <h3>Bánh Su Kem</h3>
+                    <p class="price">25,000₫</p>
+                    <button class="add-to-cart-btn" data-id="28">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="29" data-name="Bánh Quy Hạnh Nhân" data-price="35000" data-category="Bánh Ngọt" data-image="https://via.placeholder.com/300x200?text=Bánh+Quy+Hạnh+Nhân" data-description="Bánh quy hạnh nhân giòn tan, thơm bơ, hạnh nhân giòn bùi.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Quy+Hạnh+Nhân" alt="Bánh Quy Hạnh Nhân" class="product-image"> 
+                    <h3>Bánh Quy Hạnh Nhân</h3>
+                    <p class="price">35,000₫</p>
+                    <button class="add-to-cart-btn" data-id="29">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="30" data-name="Bánh Tart Trứng" data-price="30000" data-category="Bánh Ngọt" data-image="https://via.placeholder.com/300x200?text=Bánh+Tart+Trứng" data-description="Bánh tart trứng bồng bềnh, vị ngọt thanh, thơm mùi vani.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Tart+Trứng" alt="Bánh Tart Trứng" class="product-image"> 
+                    <h3>Bánh Tart Trứng</h3>
+                    <p class="price">30,000₫</p>
+                    <button class="add-to-cart-btn" data-id="30">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="31" data-name="Bánh Crepe" data-price="40000" data-category="Bánh Ngọt" data-image="https://via.placeholder.com/300x200?text=Bánh+Crepe" data-description="Bánh crepe mỏng mềm, nhân kem tươi và trái cây tươi ngon.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Crepe" alt="Bánh Crepe" class="product-image"> 
+                    <h3>Bánh Crepe</h3>
+                    <p class="price">40,000₫</p>
+                    <button class="add-to-cart-btn" data-id="31">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="32" data-name="Bánh Flan" data-price="20000" data-category="Bánh Ngọt" data-image="https://via.placeholder.com/300x200?text=Bánh+Flan" data-description="Bánh flan mềm mịn, vị ngọt thanh, thơm mùi caramel.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Flan" alt="Bánh Flan" class="product-image"> 
+                    <h3>Bánh Flan</h3>
+                    <p class="price">20,000₫</p>
+                    <button class="add-to-cart-btn" data-id="32">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <!-- ĐỒ ĐẶC BIỆT - 8 sản phẩm -->
+            <h3 class="category-title fade-in">⭐ Đồ Đặc Biệt (Special)</h3>
+            <div id="category-dacbiet" class="product-grid category-grid">
+                <div class="product-item" data-id="33" data-name="Mì Cay Hàn Quốc" data-price="65000" data-category="Đồ Đặc Biệt" data-image="https://via.placeholder.com/300x200?text=Mì+Cay+Hàn+Quốc" data-description="Mì cay Hàn Quốc với vị cay nồng đặc trưng, kèm nhiều topping hấp dẫn.">
+                    <img src="micaykimchi.jfif" alt="Mì Cay Hàn Quốc" class="product-image"> 
+                    <h3>Mì Cay Hàn Quốc</h3>
+                    <p class="price">65,000₫</p>
+                    <button class="add-to-cart-btn" data-id="33">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="34" data-name="Bánh Bao Nhân Ngọt" data-price="20000" data-category="Đồ Đặc Biệt" data-image="https://via.placeholder.com/300x200?text=Bánh+Bao+Nhân+Ngọt" data-description="Bánh bao nhân ngọt thơm ngon, vỏ bánh mềm xốp, nhân ngọt dịu.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Bao+Nhân+Ngọt" alt="Bánh Bao Nhân Ngọt" class="product-image"> 
+                    <h3>Bánh Bao Nhân Ngọt</h3>
+                    <p class="price">20,000₫</p>
+                    <button class="add-to-cart-btn" data-id="34">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="35" data-name="Sữa Chua Nếp Cẩm" data-price="35000" data-category="Đồ Đặc Biệt" data-image="https://via.placeholder.com/300x200?text=Sữa+Chua+Nếp+Cẩm" data-description="Sữa chua nếp cẩm thơm ngon, vị chua ngọt hài hòa, nếp cẩm dẻo thơm.">
+                    <img src="https://via.placeholder.com/300x200?text=Sữa+Chua+Nếp+Cẩm" alt="Sữa Chua Nếp Cẩm" class="product-image"> 
+                    <h3>Sữa Chua Nếp Cẩm</h3>
+                    <p class="price">35,000₫</p>
+                    <button class="add-to-cart-btn" data-id="35">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="36" data-name="Pizza Mini" data-price="55000" data-category="Đồ Đặc Biệt" data-image="https://via.placeholder.com/300x200?text=Pizza+Mini" data-description="Pizza mini với đế bánh giòn tan, phô mai kéo sợi, topping đa dạng.">
+                    <img src="https://via.placeholder.com/300x200?text=Pizza+Mini" alt="Pizza Mini" class="product-image"> 
+                    <h3>Pizza Mini</h3>
+                    <p class="price">55,000₫</p>
+                    <button class="add-to-cart-btn" data-id="36">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="37" data-name="Mochi Fresh" data-price="40000" data-category="Đồ Đặc Biệt" data-image="https://via.placeholder.com/300x200?text=Mochi+Fresh" data-description="Mochi fresh Nhật Bản, vỏ bánh dẻo mềm, nhân kem lạnh thơm ngon.">
+                    <img src="https://via.placeholder.com/300x200?text=Mochi+Fresh" alt="Mochi Fresh" class="product-image"> 
+                    <h3>Mochi Fresh</h3>
+                    <p class="price">40,000₫</p>
+                    <button class="add-to-cart-btn" data-id="37">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="38" data-name="Takoyaki" data-price="45000" data-category="Đồ Đặc Biệt" data-image="https://via.placeholder.com/300x200?text=Takoyaki" data-description="Takoyaki Nhật Bản, bánh bạch tuộc giòn ngoài mềm trong, sốt đặc biệt.">
+                    <img src="https://via.placeholder.com/300x200?text=Takoyaki" alt="Takoyaki" class="product-image"> 
+                    <h3>Takoyaki</h3>
+                    <p class="price">45,000₫</p>
+                    <button class="add-to-cart-btn" data-id="38">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="39" data-name="Bánh Gạo Phô Mai" data-price="50000" data-category="Đồ Đặc Biệt" data-image="https://via.placeholder.com/300x200?text=Bánh+Gạo+Phô+Mai" data-description="Bánh gạo phô mai Hàn Quốc, dai ngon, phô mai béo ngậy kéo sợi.">
+                    <img src="https://via.placeholder.com/300x200?text=Bánh+Gạo+Phô+Mai" alt="Bánh Gạo Phô Mai" class="product-image"> 
+                    <h3>Bánh Gạo Phô Mai</h3>
+                    <p class="price">50,000₫</p>
+                    <button class="add-to-cart-btn" data-id="39">Thêm vào giỏ</button>
+                </div>
+                <div class="product-item" data-id="40" data-name="Kimbap" data-price="40000" data-category="Đồ Đặc Biệt" data-image="https://via.placeholder.com/300x200?text=Kimbap" data-description="Kimbap Hàn Quốc, cơm cuộn rong biển với nhân đa dạng, tươi ngon.">
+                    <img src="https://via.placeholder.com/300x200?text=Kimbap" alt="Kimbap" class="product-image"> 
+                    <h3>Kimbap</h3>
+                    <p class="price">40,000₫</p>
+                    <button class="add-to-cart-btn" data-id="40">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANG CHI TIẾT SẢN PHẨM -->
+        <section id="product-detail-section" class="content-section">
+            <!-- Nội dung sẽ được điền bằng JavaScript -->
+        </section>
+
+        <section id="news-section" class="content-section">
+            <h2 class="section-title">📰 Tin Tức & Sự Kiện Mới Nhất 📢</h2>
+            <p>Hiện tại chưa có sự kiện nào. Hãy theo dõi chúng tôi để cập nhật các chương trình khuyến mãi và sản phẩm mới nhất!</p>
+        </section>
+
+        <section id="contact-section" class="content-section">
+            <h2 class="section-title">📞 Liên Hệ Với Chúng Tôi 📧</h2>
+            <div class="contact-info-form">
+                <div class="contact-info">
+                    <h3>Thông tin MÊ ĂN VẶT</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> **Địa chỉ:** Nhà hát của những giấc mơ </p>
+                    <p><i class="fas fa-phone"></i> **Hotline:** 0987 654 321</p>
+                    <p><i class="fas fa-envelope"></i> **Email:** meAnVat@store.vn</p>
+                    <p><i class="fas fa-clock"></i> **Giờ mở cửa:** 7:00 - 22:00 (Mỗi ngày)</p>
+                </div>
+                <div class="contact-form">
+                    <h3>Gửi tin nhắn cho chúng tôi</h3>
+                    <form>
+                        <input type="text" placeholder="Tên của bạn" required>
+                        <input type="email" placeholder="Email của bạn" required>
+                        <textarea placeholder="Nội dung tin nhắn..." rows="5" required></textarea>
+                        <button type="submit" class="add-to-cart-btn">Gửi</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <div id="cart-modal" class="modal">
+        <div class="modal-content cart-page-layout">
+            <span class="close-btn">&times;</span>
+            <div id="cart-view"></div>
+        </div>
+    </div>
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content checkout-page-layout">
+            <span class="close-btn">&times;</span>
+            <div id="checkout-view"></div>
+        </div>
+    </div>
+    <div id="auth-modal" class="modal">
+    <div class="modal-content auth-page-layout">
+        <span class="close-btn" onclick="closeAuthModal()">&times;</span>
+        
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <button id="tab-login" class="auth-tab active" onclick="switchAuthTab('login')">Đăng Nhập</button>
+                <button id="tab-register" class="auth-tab" onclick="switchAuthTab('register')">Đăng Ký</button>
+            </div>
+
+            <form id="login-form" class="auth-form active">
+                <div class="input-group">
+                    <input type="text" id="login-username" placeholder="Tên đăng nhập" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="login-password" placeholder="Mật khẩu" required>
+                </div>
+                <button type="submit" class="submit-btn">ĐĂNG NHẬP</button>
+                <p class="auth-note">Chưa có tài khoản? <a href="#" onclick="switchAuthTab('register')">Đăng ký ngay</a></p>
+            </form>
+
+            <form id="register-form" class="auth-form">
+                <div class="input-group">
+                    <input type="text" id="reg-fullname" placeholder="Họ và tên" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="reg-username" placeholder="Tên đăng nhập" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="reg-email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="reg-password" placeholder="Mật khẩu" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="reg-confirm-pass" placeholder="Nhập lại mật khẩu" required>
+                </div>
+                <button type="submit" class="submit-btn">ĐĂNG KÝ</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
