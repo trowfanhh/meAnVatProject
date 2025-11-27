@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="blocks/fragments :: head('Admin panel - SENKO', 'none')"></head>
+
+<body>
+<div th:insert="~{blocks/fragments :: scripts}"></div>
+<div th:replace="blocks/fragments :: admin_navbar"></div>
+<div class="container-fluid">
+    <br>
+    <h2 class="text-center mt-5">Welcome admin!<br> Use navbar to manage the DataBase!</h2>
+</div>
+</body>
+</html>
